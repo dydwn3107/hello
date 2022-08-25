@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css/08/boxmodel.html</title>
+    <style>
+        div.box1 {
+            /*border-width: 2px;
+            border-color: red;
+            border-style: solid;*/
+            border: 10px red solid;
+            /*padding-top: 20px;
+            padding-right: 15px;
+            padding-left: 10px;
+            padding-bottom: 15px;
+            시계방향 */
+            padding: 20px 25px 15px 25px;
+            /* 위아래:30px 양옆:25px */
+            margin: 30px 25px; 
+        }
+        div.box2 {
+            display: inline;
+            width: 300px;
+            border: 5px solid red;
+            padding: 10px;
+            margin: 25px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa officiis sunt modi reprehenderit, magni alias quis natus, consectetur sit dolorum asperiores inventore culpa
+         qui voluptates possimus enim maiores quod quisquam?
+    </div>
+
+    <div class="box2">
+        Lorem
+    </div>
+</body>
+</html>

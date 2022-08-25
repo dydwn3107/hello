@@ -1,0 +1,60 @@
+
+header {
+    color: white;
+    background-color: navy;
+    display: flex;
+    padding-left: 50px;
+}
+nav>ul {
+    padding-left: 300px;
+    float: right;
+}
+nav>ul>li {
+    color: red;
+    display: inline;
+    list-style: none;
+    margin-left: 20px;
+   
+}
+a:visited {
+    color: white;
+}
+#pet1 {
+    border: 3px solid black;
+    border-radius: 10px;
+}
+#pet2 {
+    border: 3px solid pink;
+    border-radius: 20px;
+}
+#pet3 {
+    border: 3px solid greenyellow;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+dt {
+    color: palevioletred;
+    font-weight:bold;
+}
+article {
+    width: 90%;
+    height: auto;
+    margin: 20px 10px;
+    padding: 20px;
+    background-image: url('../07/images/bg3.jpg');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 1% 32px;
+}
+h3 {
+    color: #000;
+      text-shadow: 0 0 4px #ccc, 0 -5px 4px #ff3,
+       2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -19px 18px #f20;
+}
+section {
+    border: 1px solid black;
+    background-color: white;
+}
+body {
+    background-color: black;
+}
