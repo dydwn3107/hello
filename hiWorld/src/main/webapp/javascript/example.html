@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="aaaa"> <button onclick="a()">입력</button>
+    <script>
+        function a() {
+            let ab = document.getElementById('aaaa').value;
+            if (ab != '') {
+                document.write(ab + '단')
+                for (let i = 1; i <= 9; i++) {
+                    document.write('<p>' + ab + ' * ' + i + ' = ' + (ab * i) + '</p>')
+                }
+                document.write('<button onclick="b()">새로고침</button>')
+            } else {
+                alert('숫자를 입력하세요!')
+            }
+        }
+
+        function b() {
+            location.href = '';
+        }
+    </script>
+</body>
+
+</html>
