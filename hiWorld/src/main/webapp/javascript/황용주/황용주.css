@@ -1,0 +1,125 @@
+/* 황용주.css */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Malgun Gothic';
+}
+
+#container {
+    width: 1000px;
+    margin: 5px auto;
+    border: 1px solid grey;
+}
+
+.navi ul {
+    list-style: none;
+    background: black;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.navi li {
+    display: inline-block;
+}
+
+.navi a {
+    text-decoration: none;
+    color: #fff;
+    width: 160px;
+    display: block;
+    padding: 15px;
+    font-size: 17px;
+    font-family: sans-serif;
+}
+
+.navi a:hover {
+    background: #000;
+    transition: 0.4s;
+}
+
+.navi2 {
+    float: right;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+}
+
+.content {
+    width: 40%;
+    float: left;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    
+
+    
+}
+
+.left {
+    width: 200px;
+
+    float: left;
+    text-align: center;
+    background-color: beige;
+    height: 700px;
+}
+
+.right {
+    width: 200px;
+    float: right;
+    text-align: center;
+    background-color: beige;
+    height: 700px;
+}
+
+footer {
+    clear: both;
+    background-color: burlywood;
+    height: 50px;
+    text-align: center;
+}
+.content ul li input:hover{
+    background-color: pink;
+    color: black;
+}
+form {
+    text-decoration: none;
+    width: 500px;
+    text-align: center;
+    background-color: #ccc;
+}
+.content ul li {
+    list-style: none;
+}
+form li {
+    border-radius: 5px 5px 5px 5px;
+    background-color: aliceblue;
+    border: 1px solid white;
+
+}
+label {
+    width: 130px;
+}
+input {
+    width: 250px;
+    padding: 3px 3px 3px 3px;
+    margin-left: 30px;
+
+}
+button {
+    width: 150px;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #ddd;
+    padding: 15px 15px 15px 15px;
+    
+}
+form fieldset {
+    border: none;
+}
