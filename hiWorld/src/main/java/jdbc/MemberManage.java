@@ -1,5 +1,9 @@
 package jdbc;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class MemberManage extends DAO{
 	
 	//싱글톤
@@ -66,6 +70,51 @@ public class MemberManage extends DAO{
 			disconnect();
 		}
 		return result;
+	}
+	
+	// 전체 멤버를 반환하는 메소드
+	public List<Member> getMembers() {
+		List<Member> list = new ArrayList<>();
+		
+		conn();
+		try {
+			pstmt = conn.prepareStatement("select * from bankmember");
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				Member mem = new Member();
+				mem.setMemberId(rs.getString("member_id"));
+				mem.setMemberPw(rs.getString("member_pw"));
+				mem.setMemberName(rs.getString("member_name"));
+				mem.setRole(rs.getString("role"));
+				list.add(mem);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			disconnect();
+		}
+		return list;
+	} 
+	
+	// 아이디를 기준으로 삭제처리 후 정상처리되면 true 그렇지않으면 false 반환
+	public boolean delMember(String id) {
+		conn();
+		String sql = "delete from bankmember where member_id=?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			
+			int r = pstmt.executeUpdate();
+			if(r > 0) {
+				return true; // 정상적으로 한건 삭제
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			disconnect();
+		}
+		return false; // 정상처리 안된 경우
+		
 	}
 	
 	
